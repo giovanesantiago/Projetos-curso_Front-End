@@ -152,4 +152,9 @@ body {
     .instagram-login {
         width: 100%;
     }
+
+    .download {
+        width: 100%;
+        padding: 2px;
+    }
 }

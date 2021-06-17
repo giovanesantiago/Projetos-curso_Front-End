@@ -14,7 +14,24 @@ body {
     min-height: 100vh;
     background-color: rgb(243,243,243);
     display: flex;
-    justify-content: center;
+    justify-content: center
 }
 
-.
+.instagram-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 60%;
+    height: 100vh;
+}
+
+.intagram-phone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+.intagram-phone img{
+    height: 50rem;
+}

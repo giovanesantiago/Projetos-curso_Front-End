@@ -12,7 +12,8 @@
 body {
     width: 100%;
     min-height: 100vh;
-    background-color: rgb(243,243,243);
+    background-attachment: fixed;
+    background-image: linear-gradient(to top,  #f25764, #f26052, #f27244, transparent 70%);
     margin: 0;
     padding: 0;
     display: flex;

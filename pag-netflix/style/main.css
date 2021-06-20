@@ -1,3 +1,4 @@
+/*Config padrão*/
 @charset "UTF-8";
 
 :root{
@@ -6,22 +7,20 @@
     --fontpadrao: 'Times New Roman', Times, serif;
 }
 
-
-
-
-
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
+/*Elementos base*/
 body {
     background-color: var(--preta);
     font-family: var(--fontpadrao);
+    color: white;
 }
 
-.container{
+header div.container{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -42,4 +41,27 @@ header nav a {
 
 header nav a:hover{
     color: #fff;
+}
+
+/*Filme principal*/
+
+.filme-principal{
+    font-size: 16px;
+    background-image: linear-gradient(rgba(0,0,0,.50), rgba(0,0,0,.50) 100%), url('/img/capa-house.jpg');
+
+    height: 400px;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.filme-principal .descricao {
+    margin-bottom: 40px;
+}
+
+.titulo {
+    font-size: 40px;
 }

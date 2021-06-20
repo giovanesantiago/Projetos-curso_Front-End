@@ -1,5 +1,45 @@
 @charset "UTF-8";
 
+:root{
+    --vermelho: #E50914;
+    --preta: #141414;
+    --fontpadrao: 'Times New Roman', Times, serif;
+}
+
+
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 body {
-    
+    background-color: var(--preta);
+    font-family: var(--fontpadrao);
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    margin-left: 5px;
+    color: var(--vermelho);
+    font-family: 'Arial black', Times;
+    font-size: 40px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #AAA;
+    margin-right: 10px;
+}
+
+header nav a:hover{
+    color: #fff;
 }

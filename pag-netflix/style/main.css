@@ -4,7 +4,7 @@
 :root{
     --vermelho: #E50914;
     --preta: #141414;
-    --fontpadrao: 'Times New Roman', Times, serif;
+    
 }
 
 *{
@@ -16,7 +16,7 @@
 /*Elementos base*/
 body {
     background-color: var(--preta);
-    font-family: var(--fontpadrao);
+    font-family: Arial, Helvetica, sans-serif;
     color: white;
 }
 
@@ -105,4 +105,8 @@ header nav a:hover{
     height: 100%;
     width: 100%;
     display: block;
+}
+
+.carrosel-filmes {
+    margin-top: 5px;
 }

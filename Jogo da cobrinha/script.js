@@ -1,3 +1,4 @@
+alert('Para iniciar aperte "ok" ')
 // adicionando area HTML do elemento Canvas
 let canvas = document.getElementById("snake");
 // Definindo context bidimencional
@@ -59,7 +60,6 @@ function update (event) {
 
 //Inicio para dar movimento a cobra
 function iniciarJogo() {
-    
     //regra para cobra nao sumir fora do mapa
     if(snake[0].x > 15 * box && direction == "right") snake[0].x = 0;
     if(snake[0].x < 0 && direction == "left") snake[0].x = 16 * box;
@@ -71,6 +71,7 @@ function iniciarJogo() {
         if (snake[0].x == snake[i].x && snake[0].y == snake[i].y){
             clearInterval(jogo);
             alert('Fim de jogo ! Perdeu ;( // voce fez ' + pontos + ' pontos')
+            location.reload()
         }
     }
 

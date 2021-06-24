@@ -19,6 +19,8 @@ let food = {
     x: Math.floor(Math.random() * 15 + 1) * box,
     y: Math.floor(Math.random() * 15 + 1) * box 
 }
+//Pontuação
+var pontos = 0
 
 // Criando a area do jogo
 function criarBG() {
@@ -57,12 +59,21 @@ function update (event) {
 
 //Inicio para dar movimento a cobra
 function iniciarJogo() {
-
+    
     //regra para cobra nao sumir fora do mapa
     if(snake[0].x > 15 * box && direction == "right") snake[0].x = 0;
     if(snake[0].x < 0 && direction == "left") snake[0].x = 16 * box;
     if(snake[0].y > 15 * box && direction == "down") snake[0].y = 0;
     if(snake[0].y < 0 && direction == "up") snake[0].y = 16 * box;
+
+    //game over
+    for(i = 1; i < snake.length; i++){
+        if (snake[0].x == snake[i].x && snake[0].y == snake[i].y){
+            clearInterval(jogo);
+            alert('Fim de jogo ! Perdeu ;( // voce fez ' + pontos + ' pontos')
+        }
+    }
+
 
     //iniciando funções
     criarBG();
@@ -85,6 +96,7 @@ function iniciarJogo() {
     }else {
         food.x = Math.floor(Math.random() * 15 + 1) * box;
         food.y = Math.floor(Math.random() * 15 + 1) * box;
+        pontos ++
     }
 
     

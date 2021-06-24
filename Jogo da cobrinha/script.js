@@ -13,6 +13,12 @@ snake[0] = {
 }
 //direção 
 let direction = "right";
+// comida
+let food = {
+    // randomizando o local
+    x: Math.floor(Math.random() * 15 + 1) * box,
+    y: Math.floor(Math.random() * 15 + 1) * box 
+}
 
 // Criando a area do jogo
 function criarBG() {
@@ -30,6 +36,13 @@ function criarCobrinha() {
         //Defindo tamanho de 1caixa
         context.fillRect(snake[i].x, snake[i].y, box, box); 
     }
+}
+
+// gerando comida
+function drawFood() {
+    // stylo e lugar da comida
+    context.fillStyle = "red";
+    context.fillRect(food.x, food.y, box, box);
 }
 
 // Entrada de comando do ursuario
@@ -51,8 +64,10 @@ function iniciarJogo() {
     if(snake[0].y > 15 * box && direction == "down") snake[0].y = 0;
     if(snake[0].y < 0 && direction == "up") snake[0].y = 16 * box;
 
+    //iniciando funções
     criarBG();
     criarCobrinha();
+    drawFood();
 
     //Ponto de partida ca cobra
     let snakeX = snake[0].x;
@@ -74,6 +89,6 @@ function iniciarJogo() {
     snake.unshift(newHead);
 }
 // variavel que inicia jogo a cada 100ml sem pausa
-let jogo = setInterval(inici,arJogo, 100);
+let jogo = setInterval(iniciarJogo, 100);
 
 
